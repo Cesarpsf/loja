@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coma Bem Temperos</title>
+    <style>
+        /* Estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #F2E205, #BF212E, #FD2777, #F98037, #FBB90C);
+            background-size: 300% 300%;
+            animation: backgroundAnimation 10s infinite;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FBB90C;
+        }
+
+        h1 {
+            margin: 30px 0 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .description-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 90%;
+        }
+
+        .description-container img {
+            flex: 0 0 150px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .description-container p {
+            flex: 1;
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        iframe:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #FBB90C;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: #000;
+        }
+
+        .highlight-section {
+            margin: 40px 0;
+            padding: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #FF6347, #FFD700);
+            color: #000;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: pulse 3s infinite;
+        }
+
+        .highlight-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .highlight-section a {
+            color: #000;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            background: #FFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .highlight-section a:hover {
+            background: #FF4500;
+            color: #FFF;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(255, 99, 71, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#youtube">Vídeos Site</a>
+        <a href="#vimeo">Mais vídeos</a>
+    </nav>
+
+    <h1>Coma Bem Temperos</h1>
+
+    <div id="youtube" class="video-container">
+        <h2>Apresentação</h2>
+        <iframe 
+            src="https://www.youtube.com/embed/yCtGIRBD1kM?si=hr-IIlBzF3bSFFCP" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="description-container">
+        <img src="pimrei.jpg" alt="Pimenta do Reino">
+        <p><strong>Pimenta do Reino</strong> 🔥<br>
+        A pimenta do reino é um clássico que nunca sai de moda! Com seu toque picante e envolvente, ela desperta o paladar e adiciona aquele “quê” de intensidade a qualquer prato.</p>
+    </div>
+
+    <div class="description-container">
+        <img src="colorau.jpg" alt="Colorau">
+        <p><strong>Colorau</strong> 🌈<br>
+        Traz cor vibrante e um sabor suave levemente adocicado. Feito da semente de urucum, é perfeito para dar charme e acolhimento a pratos como arroz, frango e feijão tropeiro.</p>
+    </div>
+
+    <div class="description-container">
+        <img src="temperomineiro.jpg" alt="Tempero Mineiro">
+        <p><strong>Tempero Mineiro</strong> 🥘<br>
+        Um toque caseiro e acolhedor que combina ervas frescas, alho e cebola, evocando a tradição de Minas Gerais. Excelente para feijão, carnes e comidas de boteco.</p>
+    </div>
+
+    <div class="description-container">
+        <img src="anamaria.jpg" alt="Ana Maria">
+        <p><strong>Ana Maria</strong> 🍳<br>
+        Equilíbrio perfeito de especiarias com inovação, dando um sabor único a carnes, saladas e pratos típicos como galinhada. Versátil e indispensável na cozinha.</p>
+    </div>
+
+    <div class="description-container">
+        <img src="temperob.jpg" alt="Tempero Baiano">
+        <p><strong>Tempero Baiano</strong> 🌴<br>
+        Mistura vibrante de pimentas, cominho e coentro, que adiciona calor e energia a pratos como acarajé, feijão e peixe. Um sabor picante que celebra a Bahia.</p>
+    </div>
+
+    <div class="highlight-section">
+        <h1>Vejam !!!</h1>
+        <p>Você pode comprar nossos <a href="http://localhost/loja/index.php" target="_blank" rel="external">Temperos aqui!</a></p>
+        <h2>Você também pode acessar <a href="https://www.youtube.com/watch?v=
